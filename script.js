@@ -1,4 +1,4 @@
-// Show and hide project details
+// Project details toggle
 const buttons = document.querySelectorAll(".toggle-btn");
 
 buttons.forEach(function (button) {
@@ -69,17 +69,30 @@ contactForm.addEventListener("submit", function (event) {
   }
 });
 
+// Dark mode toggle
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeToggle.textContent = "Light Mode";
+  } else {
+    darkModeToggle.textContent = "Dark Mode";
+  }
+});
+
 // Skills chart
 const skillsChart = document.getElementById("skillsChart");
 
 new Chart(skillsChart, {
   type: "bar",
   data: {
-    labels: ["HTML", "CSS", "JavaScript"],
+    labels: ["HTML", "CSS", "JavaScript", "Responsive Design", "Git/GitHub", "Chart.js"],
     datasets: [
       {
         label: "Skill Level",
-        data: [90, 85, 75],
+        data: [90, 85, 75, 80, 70, 65],
         borderWidth: 1
       }
     ]
@@ -92,17 +105,5 @@ new Chart(skillsChart, {
         max: 100
       }
     }
-  }
-});
-
-const darkModeToggle = document.getElementById("darkModeToggle");
-
-darkModeToggle.addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode");
-
-  if (document.body.classList.contains("dark-mode")) {
-    darkModeToggle.textContent = "Light Mode";
-  } else {
-    darkModeToggle.textContent = "Dark Mode";
   }
 });

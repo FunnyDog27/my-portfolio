@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,12 +13,33 @@ body {
 header {
   background-color: white;
   text-align: center;
-  padding: 25px;
+  padding: 25px 20px;
   border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
 }
 
 header h1 {
   margin: 0;
+}
+
+header p {
+  margin: 8px 0;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2a7ae2;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 section {
@@ -22,9 +47,9 @@ section {
 }
 
 #about,
-.project-gallery,
-.contact-section,
-#skills {
+#projects,
+#skills,
+#contact {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -39,6 +64,24 @@ section {
 
 .project-card {
   margin-bottom: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.project-card a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -58,6 +101,18 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.skills-list {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px 40px;
+  margin-bottom: 20px;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
 }
 
 .form-group {
@@ -105,6 +160,7 @@ canvas {
   width: 100%;
 }
 
+/* Dark mode */
 body.dark-mode {
   background-color: #121212;
   color: white;
@@ -115,8 +171,14 @@ body.dark-mode header {
   border-bottom: 1px solid #444;
 }
 
+body.dark-mode nav a,
+body.dark-mode .project-card a {
+  color: #66aaff;
+}
+
 body.dark-mode .content-box,
 body.dark-mode .project-card,
+body.dark-mode .skills-list,
 body.dark-mode canvas {
   background-color: #1e1e1e;
   color: white;
@@ -134,6 +196,7 @@ body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode p,
+body.dark-mode li,
 body.dark-mode label {
   color: white;
 }
@@ -145,39 +208,4 @@ body.dark-mode button {
 
 body.dark-mode button:hover {
   background-color: #1f5fb8;
-}
-
-header button {
-  margin-top: 15px;
-}
-
-button {
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-section {
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-nav a {
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #2a7ae2;
 }
