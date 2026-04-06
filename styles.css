@@ -209,3 +209,34 @@ body.dark-mode button {
 body.dark-mode button:hover {
   background-color: #1f5fb8;
 }
+
+button {
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+section {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2a7ae2;
+}

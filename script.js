@@ -1,4 +1,3 @@
-// Project details toggle
 const buttons = document.querySelectorAll(".toggle-btn");
 
 buttons.forEach(function (button) {
@@ -15,7 +14,6 @@ buttons.forEach(function (button) {
   });
 });
 
-// Contact form validation
 const contactForm = document.getElementById("contactForm");
 
 const nameInput = document.getElementById("name");
@@ -69,7 +67,6 @@ contactForm.addEventListener("submit", function (event) {
   }
 });
 
-// Dark mode toggle
 const darkModeToggle = document.getElementById("darkModeToggle");
 
 darkModeToggle.addEventListener("click", function () {
@@ -82,7 +79,6 @@ darkModeToggle.addEventListener("click", function () {
   }
 });
 
-// Skills chart
 const skillsChart = document.getElementById("skillsChart");
 
 new Chart(skillsChart, {
