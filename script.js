@@ -1,7 +1,8 @@
+// Show and hide project details
 const buttons = document.querySelectorAll(".toggle-btn");
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
+buttons.forEach(function (button) {
+  button.addEventListener("click", function () {
     const details = button.nextElementSibling;
 
     details.classList.toggle("hidden");
@@ -14,6 +15,7 @@ buttons.forEach((button) => {
   });
 });
 
+// Contact form validation
 const contactForm = document.getElementById("contactForm");
 
 const nameInput = document.getElementById("name");
@@ -67,17 +69,20 @@ contactForm.addEventListener("submit", function (event) {
   }
 });
 
-const ctx = document.getElementById("skillsChart");
+// Skills chart
+const skillsChart = document.getElementById("skillsChart");
 
-new Chart(ctx, {
+new Chart(skillsChart, {
   type: "bar",
   data: {
     labels: ["HTML", "CSS", "JavaScript"],
-    datasets: [{
-      label: "Skill Level",
-      data: [90, 85, 80],
-      borderWidth: 1
-    }]
+    datasets: [
+      {
+        label: "Skill Level",
+        data: [90, 85, 75],
+        borderWidth: 1
+      }
+    ]
   },
   options: {
     responsive: true,
@@ -87,5 +92,17 @@ new Chart(ctx, {
         max: 100
       }
     }
+  }
+});
+
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeToggle.textContent = "Light Mode";
+  } else {
+    darkModeToggle.textContent = "Dark Mode";
   }
 });
