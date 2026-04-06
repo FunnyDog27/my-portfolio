@@ -6,6 +6,7 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
 
@@ -26,62 +27,63 @@
     </p>
   </section>
 
-  <section id="projects">
+  <section class="project-gallery">
   <h2>My Projects</h2>
 
   <div class="project-card">
-    <h3>Portfolio Website</h3>
-    <p>A personal website to showcase my work.</p>
+    <h3>Project One</h3>
+    <p>A short summary of the project.</p>
     <button class="toggle-btn">Show Details</button>
     <div class="project-details hidden">
-      <p>This project was built with HTML, CSS, and JavaScript.</p>
+      <p>This project was built using HTML, CSS, and JavaScript.</p>
       <p>It includes responsive design and interactive features.</p>
     </div>
   </div>
 
   <div class="project-card">
-    <h3>To-Do App</h3>
-    <p>A simple task manager for organizing daily work.</p>
+    <h3>Project Two</h3>
+    <p>A short summary of the project.</p>
     <button class="toggle-btn">Show Details</button>
     <div class="project-details hidden">
-      <p>This app lets users add, delete, and complete tasks.</p>
-      <p>It uses JavaScript for DOM updates and local storage.</p>
+      <p>This project focuses on layout design and user-friendly navigation.</p>
+      <p>It was created as part of my web development practice.</p>
     </div>
   </div>
 
   <div class="project-card">
-    <h3>Weather App</h3>
-    <p>A weather dashboard showing current conditions.</p>
+    <h3>Project Three</h3>
+    <p>A short summary of the project.</p>
     <button class="toggle-btn">Show Details</button>
     <div class="project-details hidden">
-      <p>This project uses an API to fetch weather data.</p>
-      <p>It displays temperature, humidity, and forecast info.</p>
+      <p>This project demonstrates DOM manipulation and event handling.</p>
+      <p>Users can interact with the content dynamically.</p>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section class="contact-section">
   <h2>Contact Me</h2>
 
-  <form id="contact-form">
+  <form id="contactForm">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" />
-      <small class="error-message"></small>
+      <small class="error" id="nameError"></small>
     </div>
 
     <div class="form-group">
       <label for="email">Email</label>
       <input type="text" id="email" name="email" />
-      <small class="error-message"></small>
+      <small class="error" id="emailError"></small>
     </div>
 
     <div class="form-group">
       <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5"></textarea>
-      <small class="error-message"></small>
+      <textarea id="message" name="message"></textarea>
+      <small class="error" id="messageError"></small>
     </div>
 
     <button type="submit">Send Message</button>
   </form>
 </section>
+
