@@ -87,3 +87,18 @@ footer {
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.input-error {
+  border: 2px solid red;
+}
