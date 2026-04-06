@@ -66,3 +66,26 @@ contactForm.addEventListener("submit", function (event) {
     contactForm.reset();
   }
 });
+
+const ctx = document.getElementById("skillsChart");
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["HTML", "CSS", "JavaScript"],
+    datasets: [{
+      label: "Skill Level",
+      data: [90, 85, 80],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
